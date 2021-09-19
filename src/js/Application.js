@@ -15,15 +15,14 @@ export default class Application extends EventEmitter {
   }
 
   init() {
-    this.addListener('click', () => {
-      console.log('asdf')
+    document.querySelector(".article").addEventListener("click", () => {
       anime({
-        targets: '.main',
+        targets: ".main",
         translateX: 250,
-        direction: 'alternate',
+        direction: "alternate",
         loop: true,
-        easing: 'spring(1, 80, 10, 0)'
-      })
-    })
+        easing: "spring(1, 80, 10, 0)",
+      });
+    });
   }
 }
